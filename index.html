@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#172554">
+  <title>ShoeStyle | Find Your Fit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="ShoeStyle home">Shoe<span>Style</span></a>
+    <div class="header-actions">
+      <span class="tagline">Find your fit.</span>
+      <button class="cart-button" id="cartButton" type="button" aria-label="Shopping bag">
+        Bag <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">THE EVERYDAY SHOE EDIT</p>
+        <h1>Step into<br><span>your style.</span></h1>
+        <p class="hero-copy">Explore shoes for every mood, moment, and occasion.</p>
+        <a class="hero-link" href="#shop">Explore collection <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle"></div>
+        <div class="art-shoe">👟</div>
+        <div class="art-label">WALK YOUR WAY</div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CURATED FOR YOU</p>
+          <h2>Shop the collection</h2>
+        </div>
+        <p id="resultCount" class="result-count">Showing all shoes</p>
+      </div>
+
+      <div class="filters" aria-label="Shoe filters">
+        <label>
+          <span>Shop by</span>
+          <select id="genderFilter">
+            <option value="all">Everyone</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+          </select>
+        </label>
+        <label>
+          <span>Category</span>
+          <select id="categoryFilter">
+            <option value="all">All categories</option>
+            <option value="casual">Casual shoes</option>
+            <option value="sneakers">Sneakers</option>
+            <option value="flats">Flat shoes</option>
+          </select>
+        </label>
+        <label class="search-label">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Search shoes..." autocomplete="off">
+        </label>
+        <button class="reset-button" id="resetFilters" type="button">Reset filters</button>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState" hidden>No shoes match those filters. Try another category.</p>
+    </section>
+
+    <section class="note-section">
+      <div>
+        <p class="eyebrow">A NOTE FROM SHOESTYLE</p>
+        <h2>Your next favourite pair starts here.</h2>
+      </div>
+      <p>This starter shop uses sample products. Add your own shoe photos to the <code>images</code> folders and update the product list in <code>script.js</code>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span class="brand footer-brand">Shoe<span>Style</span></span>
+    <p>Style for every step · Demo storefront</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
